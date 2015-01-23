@@ -39,6 +39,7 @@ public class MainActivity extends Activity {
 		tvOutput = (TextView) findViewById(R.id.tvOutput);
 		btnTranslate = (Button) findViewById(R.id.btnTranslate);
 
+		// onclick translate
 		btnTranslate.setOnClickListener(new OnClickListener() {
 
 			@Override
@@ -55,7 +56,7 @@ public class MainActivity extends Activity {
 							HttpParams httpParameters = new BasicHttpParams();
 							DefaultHttpClient client = new DefaultHttpClient(
 									httpParameters);
-							String url = "https://www.googleapis.com/language/translate/v2?key=AIzaSyC-CSkRiS3TOsBvtIKlsP81yUHKK-dQMK0&source=en&target=vi&q="
+							String url = "https://www.googleapis.com/language/translate/v2?key=1AIzaSyC-CSkRiS3TOsBvtIKlsP81yUHKK-dQMK0&source=en&target=vi&q="
 									+ edtInput.getText().toString();
 							HttpUriRequest request = new HttpGet(url);
 							HttpResponse httpResponse = client.execute(request);
